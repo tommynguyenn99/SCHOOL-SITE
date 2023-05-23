@@ -1,4 +1,22 @@
 <?php
+
+/**
+ * The template for displaying schedule
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package FWD_Starter_Theme
+ */
+
+get_header();
+?>
+
+<?php
 $args = array(
     'post_type' => 'post',
     'posts_per_page' => 3, // Specify the number of posts you want to display
@@ -20,3 +38,6 @@ if ($query->have_posts()) {
 
 wp_reset_postdata();
 ?>
+
+<?php
+get_footer();
