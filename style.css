@@ -459,8 +459,12 @@ big {
 --------------------------------------------- */
 body {
 	background: #fff;
-	position: relative;
 	min-height: 100vh;
+}
+
+.home {
+	margin: 0;
+	padding: 0;
 }
 
 hr {
@@ -701,13 +705,36 @@ textarea {
 .site-header {
 	width: 100%;
 	background-color: #111;
+	height: 6rem;
+	border-top: 3px solid #305c9f;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
 }
 .site-header a {
 	color: #fff;
-	padding-right: 0.8rem;
+	padding-right: 1.2rem;
 }
-.site-header .nav-menu a {
+.site-header .menu {
+	display: flex;
 	float: right;
+}
+.site-header .site-title {
+	font-size: 1.3em;
+	text-transform: uppercase;
+	margin: 3rem 0 0 1.2rem;
+}
+.site-header .site-title a {
+	text-decoration: none;
+}
+.site-header .main-navigation {
+	display: block;
+	width: 100%;
+	position: absolute;
+	top: 52px;
+	right: 0;
+	z-index: 1000;
 }
 
 .site-footer {
@@ -716,7 +743,7 @@ textarea {
 	text-align: center;
 	padding: 1.25rem;
 	margin-top: 1rem;
-	height: 12rem;
+	height: 10rem;
 	position: relative;
 	bottom: 0;
 	width: 100%;
