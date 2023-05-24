@@ -29,7 +29,9 @@ if ($query->have_posts()) {
         $query->the_post();
         // Display the post content or any other desired information
         the_title('<h2>', '</h2>');
-        the_content();
+        the_post_thumbnail('large');
+        the_excerpt();
+        
     }
 } else {
     // No posts found
