@@ -1,0 +1,29 @@
+
+// Footer 
+.site-footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 1.25rem;
+    margin-top: 1rem;
+    height: 10rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    
+    a { 
+        color: #fff;
+        text-decoration: none;
+        margin: 0 auto;
+    }
+    .menu {
+        float: right;
+    li { 
+        list-style: none;
+    }
+    }
+    .footer-contact, .site-info { 
+        margin: 0 auto;
+    }
+
+  }
