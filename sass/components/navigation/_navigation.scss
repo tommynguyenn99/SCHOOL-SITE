@@ -117,7 +117,7 @@ border-top: 3px solid #305c9f;
 position: fixed;
 top: 0;
 left: 0;
-z-index: 1000;
+// z-index: 1000;
 a {
 color: #fff;
 padding-right: 1.2rem;
@@ -142,36 +142,8 @@ a {
     position: absolute;
     top: 52px;
     right: 0;
-    z-index: 1000;
+    // z-index: 1000;
 }
 }
 
 
-
-// Footer 
-	.site-footer {
-		background-color: #111;
-		color: #fff;
-		text-align: center;
-		padding: 1.25rem;
-		margin-top: 1rem;
-		height: 10rem;
-		position: relative;
-		bottom: 0;
-		width: 90%;
-		
-		a { 
-			color: #fff;
-			text-decoration: none;
-		}
-		.menu {
-			float: right;
-		li { 
-			list-style: none;
-		}
-		}
-		.footer-contact, .site-info { 
-			margin: 0 auto;
-		}
-	  }
-	

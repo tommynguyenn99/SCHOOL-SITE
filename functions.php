@@ -172,6 +172,10 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/template-functions.php';
 
+// Custom Post Type 
+require get_template_directory() . '/inc/cpt-taxonomy.php';
+
+
 /**
  * Customizer additions.
  */

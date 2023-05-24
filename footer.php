@@ -17,6 +17,7 @@
 
 		<nav id="footer-navigation" class="footer-navigation">
 			<a href="<?php echo esc_url(__('https://docs.google.com/document/d/1OBz9bzBbeV8paIeXLqZOcoNKQpn0oK3SpHiaOeZQCtY/edit?usp=sharing/', 'fwd-school-theme')); ?>">
+				<!-- We can delete google docs link later, no longer needed -->
 				<!-- Credits header  -->
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
