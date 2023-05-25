@@ -35,7 +35,7 @@ get_header();
 
 
 
-
+    <!-- Faculty -->
     <h2>Faculty</h2>
     <?php
     $faculty_args = array(
@@ -54,17 +54,15 @@ get_header();
     if ($faculty_query->have_posts()) :
         while ($faculty_query->have_posts()) : $faculty_query->the_post();
             $name = get_the_title();
-            $bio = get_sub_field('staff_bio');
-            $courses = get_sub_field('staff_course');
-            $website = get_sub_field('staff_link');
+            $bio = get_field('staff_bio');
+            $courses = get_field('staff_course');
+            $website = get_field('staff_link');
     ?>
 
-            <div class="staff-member">
+            <div class="faculty-member">
                 <h3><?php echo $name; ?></h3>
                 <p><?php echo $bio; ?></p>
-                <?php if ($courses) : ?>
-                    <p><strong>Courses:</strong> <?php echo $courses; ?></p>
-                <?php endif; ?>
+
                 <?php if ($website) : ?>
                     <p><strong>Website:</strong> <a href="<?php echo $website; ?>"><?php echo $website; ?></a></p>
                 <?php endif; ?>
@@ -77,6 +75,8 @@ get_header();
     endif;
     ?>
 
+
+    <!-- Admin Staff    -->
     <h2>Administrative Staff</h2>
     <?php
     $admin_args = array(
@@ -95,10 +95,10 @@ get_header();
     if ($admin_query->have_posts()) :
         while ($admin_query->have_posts()) : $admin_query->the_post();
             $name = get_the_title();
-            $bio = the_field('staff_bio');
+            $bio = get_field('staff_bio');
     ?>
 
-            <div class="staff-member">
+            <div class="admin-member">
                 <h3><?php echo $name; ?></h3>
                 <p><?php echo $bio; ?></p>
             </div>

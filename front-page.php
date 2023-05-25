@@ -79,7 +79,6 @@ get_header();
                     echo '</p>';
                 }
             }
-
             ?>
         </section>
 
