@@ -2,9 +2,14 @@ body {
 	background: $color__background-body; // Fallback for when there is no custom background color defined.
 	// position: relative;
 	min-height: 100vh;
+
 }
 
 .home { 
 	margin: 0;
 	padding: 0;
+}
+
+.site-main {
+	margin-top: 6rem;
 }

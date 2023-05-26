@@ -172,6 +172,10 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/template-functions.php';
 
+// Custom Post Type 
+require get_template_directory() . '/inc/cpt-taxonomy.php';
+
+
 /**
  * Customizer additions.
  */
@@ -183,3 +187,17 @@ require get_template_directory() . '/inc/customizer.php';
 if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+// Change title 
+function change_student_title_text($title)
+{
+	$screen = get_current_screen();
+
+	if ('student_data_post' == $screen->post_type) {
+		$title = 'Add student name';
+	}
+
+	return $title;
+}
+
+add_filter('enter_title_here', 'change_student_title_text');

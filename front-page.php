@@ -154,7 +154,7 @@ get_header();
                 // get post type
                 'post_type'      => 'post',
                 // grab two posts per page 
-                'posts_per_page' => 4
+                'posts_per_page' => 3
 
             );
             $blog_query = new WP_Query($args);
@@ -195,3 +195,4 @@ get_header();
 
 <?php
 get_footer();
+

@@ -19,7 +19,7 @@ get_header();
 <main id="primary" class="site-main">
 
     <?php
-    echo "<h1>Course Scheudule</h1>";
+    echo "<h1>Course Schedule</h1>";
     the_field('table_information');
     ?>
     <table>
