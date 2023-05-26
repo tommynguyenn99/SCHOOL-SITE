@@ -1,0 +1,43 @@
+.site-main { 
+    width: 80%;
+
+.faculty-staff { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    .faculty-header { 
+        text-decoration: underline;
+        font-size: 2rem;
+        width: 100%;
+    }
+    .faculty-member { 
+        width: 48%;
+        margin: 0;
+        h3 {
+            font-size: 1.5rem;
+        }
+    }
+
+}
+
+.admin-staff { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    .admin-header { 
+        width: 100%;
+        text-decoration: underline;
+        font-size: 2rem;
+
+    }
+    .admin-member { 
+        width: 48%;
+        margin: 0;
+        h3 {
+            font-size: 1.5rem;
+        }
+    }
+}
+}
