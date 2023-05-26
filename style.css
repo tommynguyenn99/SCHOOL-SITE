@@ -981,4 +981,10 @@ textarea {
 .site-footer .footer-contact, .site-footer .site-info {
 	margin: 0 auto;
 }
+
+.site-main {
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 8rem;
+}
 /*# sourceMappingURL=sass/style.css.map */

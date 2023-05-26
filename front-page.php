@@ -25,7 +25,7 @@ get_header();
             // Load intro section from seperate page using WP_Query 
             // Page ID is the id of the about page where we added text 
 
-            $args = array('page_id' => 13);
+            $args = array('page_id' => 11);
 
 
             $intro_query = new WP_Query($args);
@@ -182,7 +182,7 @@ get_header();
 
             ?>
         </section>
-        
+
 
 
     <?php
@@ -195,4 +195,3 @@ get_header();
 
 <?php
 get_footer();
-
