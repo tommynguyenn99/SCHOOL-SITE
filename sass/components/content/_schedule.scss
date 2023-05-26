@@ -1,5 +1,32 @@
 .site-main { 
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
     margin-top: 8rem;
+
+    p { 
+        font-size: 1.2rem;
+    }
+
+.schedule-caption { 
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+table { 
+    thead { 
+        th {
+            font-size: 1.3rem;
+        }
+    }
+    margin: 0 auto;
+    tbody {
+        td { 
+            text-align: center;
+            font-size: 1.2rem;
+            padding: 1rem;
+        }
+    tr:nth-child(2n+1) { 
+        background-color: rgb(215, 215, 215); 
+    }
+}
+}
 }

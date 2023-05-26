@@ -983,8 +983,29 @@ textarea {
 }
 
 .site-main {
-	width: 80%;
+	width: 60%;
 	margin: 0 auto;
 	margin-top: 8rem;
+}
+.site-main p {
+	font-size: 1.2rem;
+}
+.site-main .schedule-caption {
+	margin-bottom: 1rem;
+	font-size: 1.2rem;
+}
+.site-main table {
+	margin: 0 auto;
+}
+.site-main table thead th {
+	font-size: 1.3rem;
+}
+.site-main table tbody td {
+	text-align: center;
+	font-size: 1.2rem;
+	padding: 1rem;
+}
+.site-main table tbody tr:nth-child(2n+1) {
+	background-color: rgb(215, 215, 215);
 }
 /*# sourceMappingURL=sass/style.css.map */

@@ -25,6 +25,7 @@ get_header();
             // Load intro section from seperate page using WP_Query 
             // Page ID is the id of the about page where we added text 
 
+            // If front page is not displaying, make sure this is the correct id 
             $args = array('page_id' => 11);
 
 
