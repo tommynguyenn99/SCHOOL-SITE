@@ -75,14 +75,14 @@ get_header();
 
             // Display the button
             $button_url = get_permalink();
-            $button_label = 'Read More';
+            $button_label = 'Read More About This Student...';
     ?>
             <a href="<?php echo $button_url; ?>" class="button"><?php echo $button_label; ?></a>
     <?php
         }
     } else {
         // No posts found
-        echo 'No Designers Found.';
+        echo 'No Developers Found.';
     }
 
     wp_reset_postdata();
