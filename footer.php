@@ -28,6 +28,9 @@
 	</div>
 	<!-- Created by  -->
 	<div class="site-info">
+		<a href="<?php echo esc_url( home_url( 'https://tommynguyen.ca/school/' ) ); ?>">
+		<img src="path_to_your_logo_image" alt="Logo">
+		</a>
 		<?php esc_html_e('Created by ', 'fwd-school-theme'); ?><a href="<?php echo esc_url(__('https://tommynguyen.ca/', 'fwd-school-theme')); ?>"><?php esc_html_e('Tommy N & Brooke N', 'fwd-school-theme'); ?></a>
 
 	</div><!-- .site-info -->
