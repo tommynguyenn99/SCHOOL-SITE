@@ -983,8 +983,69 @@ textarea {
 }
 
 .site-main {
-	width: 80%;
+	width: 60%;
 	margin: 0 auto;
 	margin-top: 8rem;
+}
+.site-main p {
+	font-size: 1.2rem;
+}
+.site-main .schedule-caption {
+	margin-bottom: 1rem;
+	font-size: 1.2rem;
+}
+.site-main table {
+	margin: 0 auto;
+}
+.site-main table thead th {
+	font-size: 1.3rem;
+}
+.site-main table tbody td {
+	text-align: center;
+	font-size: 1.2rem;
+	padding: 1rem;
+}
+.site-main table tbody tr:nth-child(2n+1) {
+	background-color: rgb(215, 215, 215);
+}
+
+.site-main {
+	width: 80%;
+}
+.site-main .faculty-staff {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+}
+.site-main .faculty-staff .faculty-header {
+	text-decoration: underline;
+	font-size: 2rem;
+	width: 100%;
+}
+.site-main .faculty-staff .faculty-member {
+	width: 48%;
+	margin: 0;
+}
+.site-main .faculty-staff .faculty-member h3 {
+	font-size: 1.5rem;
+}
+.site-main .admin-staff {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+}
+.site-main .admin-staff .admin-header {
+	width: 100%;
+	text-decoration: underline;
+	font-size: 2rem;
+}
+.site-main .admin-staff .admin-member {
+	width: 48%;
+	margin: 0;
+}
+.site-main .admin-staff .admin-member h3 {
+	font-size: 1.5rem;
 }
 /*# sourceMappingURL=sass/style.css.map */

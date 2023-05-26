@@ -32,87 +32,84 @@ get_header();
     endwhile; // End of the loop.
     ?>
 
-
-
-
-    <!-- Faculty -->
-    <h2>Faculty</h2>
-    <?php
-    $faculty_args = array(
-        'post_type' => 'school_staff_post',
-        'tax_query' => array(
-            array(
-                'taxonomy' => 'staff_category',
-                'field'    => 'slug',
-                'terms'    => 'faculty',
+    <section class="admin-staff">
+        <!-- Admin Staff    -->
+        <h2 class="admin-header">Administrative</h2>
+        <?php
+        $admin_args = array(
+            'post_type' => 'school_staff_post',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'staff_category',
+                    'field'    => 'slug',
+                    'terms'    => 'administrative',
+                ),
             ),
-        ),
-    );
+        );
 
-    $faculty_query = new WP_Query($faculty_args);
+        $admin_query = new WP_Query($admin_args);
 
-    if ($faculty_query->have_posts()) :
-        while ($faculty_query->have_posts()) : $faculty_query->the_post();
-            $name = get_the_title();
-            $bio = get_field('staff_bio');
-            $courses = get_field('staff_course');
-            $website = get_field('staff_link');
-    ?>
+        if ($admin_query->have_posts()) :
+            while ($admin_query->have_posts()) : $admin_query->the_post();
+                $name = get_the_title();
+                $bio = get_field('staff_bio');
+        ?>
 
-            <div class="faculty-member">
-                <h3><?php echo $name; ?></h3>
-                <p><?php echo $bio; ?></p>
+                <article class="admin-member">
+                    <h3><?php echo $name; ?></h3>
+                    <p><?php echo $bio; ?></p>
+                </article>
 
-                <?php if ($website) : ?>
-                    <p><strong>Website:</strong> <a href="<?php echo $website; ?>"><?php echo $website; ?></a></p>
-                <?php endif; ?>
-            </div>
+        <?php endwhile;
+            wp_reset_postdata();
+        else :
+            echo '<p>No administrative staff found.</p>';
+        endif;
 
-    <?php endwhile;
-        wp_reset_postdata();
-    else :
-        echo '<p>No faculty members found.</p>';
-    endif;
-    ?>
+        ?>
+    </section>
 
-
-    <!-- Admin Staff    -->
-    <h2>Administrative Staff</h2>
-    <?php
-    $admin_args = array(
-        'post_type' => 'school_staff_post',
-        'tax_query' => array(
-            array(
-                'taxonomy' => 'staff_category',
-                'field'    => 'slug',
-                'terms'    => 'administrative',
+    <section class="faculty-staff">
+        <!-- Faculty -->
+        <h2 class="faculty-header">Faculty</h2>
+        <?php
+        $faculty_args = array(
+            'post_type' => 'school_staff_post',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'staff_category',
+                    'field'    => 'slug',
+                    'terms'    => 'faculty',
+                ),
             ),
-        ),
-    );
+        );
 
-    $admin_query = new WP_Query($admin_args);
+        $faculty_query = new WP_Query($faculty_args);
 
-    if ($admin_query->have_posts()) :
-        while ($admin_query->have_posts()) : $admin_query->the_post();
-            $name = get_the_title();
-            $bio = get_field('staff_bio');
-    ?>
+        if ($faculty_query->have_posts()) :
+            while ($faculty_query->have_posts()) : $faculty_query->the_post();
+                $name = get_the_title();
+                $bio = get_field('staff_bio');
+                $courses = get_field('staff_course');
+                $website = get_field('staff_link');
+        ?>
 
-            <div class="admin-member">
-                <h3><?php echo $name; ?></h3>
-                <p><?php echo $bio; ?></p>
-            </div>
+                <div class="faculty-member">
+                    <h3><?php echo $name; ?></h3>
+                    <p><?php echo $bio; ?></p>
 
-    <?php endwhile;
-        wp_reset_postdata();
-    else :
-        echo '<p>No administrative staff found.</p>';
-    endif;
+                    <?php if ($website) : ?>
+                        <p><a href="<?php echo $website; ?>"><strong>Instructor Website</strong></a></p>
+                    <?php endif; ?>
+                </div>
 
-    ?>
-
-
-
+        <?php endwhile;
+            wp_reset_postdata();
+        else :
+            echo '<p>No faculty members found.</p>';
+        endif;
+        ?>
+    </section>
 
     <a href="#" class="topbutton"></a>
 </main><!-- #primary -->
