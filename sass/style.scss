@@ -102,4 +102,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "utilities/alignments";
 
 // Footer 
-@import "footer"
+@import "components/content/footer";
+
+// Schedule 
+@import "components/content/schedule";

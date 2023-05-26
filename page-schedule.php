@@ -20,10 +20,13 @@ get_header();
 
     <?php
     echo "<h1>Course Schedule</h1>";
+
+    echo "<p>";
     the_field('table_information');
+    echo "</p>";
     ?>
     <table>
-        <caption><?php the_field('schedule_heading'); ?></caption>
+        <caption class="schedule-caption"><?php the_field('schedule_heading'); ?></caption>
         <!-- Table Head -->
         <thead>
             <tr>
