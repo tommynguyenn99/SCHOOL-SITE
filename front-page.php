@@ -44,7 +44,7 @@ get_header();
         </section>
 
         <section class="home-work">
-            <h2>News</h2>
+            <h2>Recent News</h2>
             <?php
             $args = array(
                 // grab me a max of 4 post, in the work category, only if they are marked with featured front page
@@ -146,10 +146,6 @@ get_header();
         </section>
 
         <section class="home-blog">
-            <!-- Translate into another language -->
-            <h2><?php esc_html_e('Latest Blog Posts', 'fwd') ?></h2>
-
-
             <?php
             $args = array(
                 // get post type
@@ -167,15 +163,16 @@ get_header();
                     // have the post below singlular or else will loop 
                     $blog_query->the_post();
             ?>
-                    <article>
-                        <a href="<?php the_permalink(); ?>">
-                            <div class="post-thumbnail">
-                                <?php the_post_thumbnail('latest-blog-post'); ?>
-                            </div><!-- .post-thumbnail -->
+                   <article>
+                <a href="<?php the_permalink(); ?>">
+                    <div class="post-thumbnail">
+                        <?php the_post_thumbnail('medium'); ?>
+                        <div class="post-details">
                             <h3><?php the_title(); ?></h3>
-                            <p>Published on: <?php echo get_the_date(); ?></p>
-                        </a>
-                    </article>
+                        </div>
+                    </div>
+                </a>
+            </article>
             <?php
                 }
                 wp_reset_postdata();
