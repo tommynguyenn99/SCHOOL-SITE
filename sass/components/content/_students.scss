@@ -1,0 +1,19 @@
+.students { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    a { 
+        text-decoration: none;
+        color: rgb(6, 6, 145);
+        font-weight: bold;
+    }
+    .single-student { 
+        width: 30%;
+        text-decoration: none;
+        img { 
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+}
