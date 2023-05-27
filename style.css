@@ -765,6 +765,45 @@ textarea {
 	margin: 0 0 1.5em;
 }
 
+.home-blog {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.post-thumbnail {
+	position: relative;
+}
+
+.post-thumbnail a {
+	display: block;
+}
+
+.post-details {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 10px;
+	text-align: center;
+}
+
+.post-details h3 {
+	margin: 0;
+	font-size: 18px;
+	color: #003c71;
+	transition: color 0.3s ease;
+}
+
+.post-details a:hover {
+	text-decoration: underline;
+}
+
+.post-details:hover h3 {
+	color: #3766ac;
+}
+
 /* Comments
 --------------------------------------------- */
 .comment-content a {
