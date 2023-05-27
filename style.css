@@ -1018,6 +1018,9 @@ textarea {
 	justify-content: space-between;
 	margin-bottom: 2rem;
 }
+.site-main .faculty-staff a {
+	text-decoration: none;
+}
 .site-main .faculty-staff .faculty-header {
 	text-decoration: underline;
 	font-size: 2rem;
@@ -1047,5 +1050,26 @@ textarea {
 }
 .site-main .admin-staff .admin-member h3 {
 	font-size: 1.5rem;
+}
+
+.students {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.students a {
+	text-decoration: none;
+	color: rgb(6, 6, 145);
+	font-weight: bold;
+}
+.students .single-student {
+	width: 30%;
+	text-decoration: none;
+}
+.students .single-student img {
+	width: 300px;
+	height: 200px;
+	-o-object-fit: cover;
+	   object-fit: cover;
 }
 /*# sourceMappingURL=sass/style.css.map */
