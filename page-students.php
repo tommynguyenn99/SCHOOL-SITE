@@ -59,7 +59,9 @@ get_header();
                 <article class="single-student">
                     <?php
                     // display content and other info
-                    the_title('<h2>', '</h2>');
+
+                    // use the code below wrap in a tag . get_permalink() to retrieve the url of the student single page 
+                    echo '<h2><a href="' . get_permalink() . '">' . get_the_title() . '</a></h2>';
                     if (has_post_thumbnail()) {
                         the_post_thumbnail('medium');
                     }
@@ -71,6 +73,7 @@ get_header();
                         echo '<p><strong>Specialty:</strong> ';
                         $term_names = array();
                         foreach ($terms as $term) {
+                            // get the url of each term eg.designer, developer 
                             $term_names[] = '<a href="' . get_term_link($term->term_id) . '">' . $term->name . '</a>';
                         }
                         echo implode(', ', $term_names);
@@ -122,7 +125,7 @@ get_header();
                 <article class="single-student">
                     <?php
                     // Display the post content or any other desired information
-                    the_title('<h2>', '</h2>');
+                    echo '<h2><a href="' . get_permalink() . '">' . get_the_title() . '</a></h2>';
                     if (has_post_thumbnail()) {
                         the_post_thumbnail('medium');
                     }

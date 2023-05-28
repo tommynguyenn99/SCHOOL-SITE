@@ -97,6 +97,7 @@ get_header();
                 <div class="faculty-member">
                     <h3><?php echo $name; ?></h3>
                     <p><?php echo $bio; ?></p>
+                    <p>Courses: <?php echo $courses; ?></p>
 
                     <?php if ($website) : ?>
                         <p><a href="<?php echo $website; ?>"><strong>Instructor Website</strong></a></p>

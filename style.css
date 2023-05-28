@@ -1066,7 +1066,6 @@ textarea {
 	width: 100%;
 }
 .site-main .faculty-staff .faculty-member {
-	width: 48%;
 	margin: 0;
 }
 .site-main .faculty-staff .faculty-member h3 {
@@ -1084,13 +1083,22 @@ textarea {
 	font-size: 2rem;
 }
 .site-main .admin-staff .admin-member {
-	width: 48%;
 	margin: 0;
 }
 .site-main .admin-staff .admin-member h3 {
 	font-size: 1.5rem;
 }
 
+@media (min-width: 20rem) {
+	.admin-member, .faculty-member {
+		width: 100%;
+	}
+}
+@media (min-width: 37.5rem) {
+	.admin-member, .faculty-member {
+		width: 48%;
+	}
+}
 .students {
 	display: flex;
 	flex-wrap: wrap;
@@ -1102,7 +1110,7 @@ textarea {
 	font-weight: bold;
 }
 .students .single-student {
-	width: 30%;
+	margin-bottom: 3rem;
 	text-decoration: none;
 }
 .students .single-student img {
@@ -1110,5 +1118,21 @@ textarea {
 	height: 200px;
 	-o-object-fit: cover;
 	   object-fit: cover;
+}
+
+@media (min-width: 20rem) {
+	.single-student {
+		width: 100%;
+	}
+}
+@media (min-width: 37.5rem) {
+	.single-student {
+		width: 48%;
+	}
+}
+@media (min-width: 56.25rem) {
+	.single-student {
+		width: 30%;
+	}
 }
 /*# sourceMappingURL=sass/style.css.map */

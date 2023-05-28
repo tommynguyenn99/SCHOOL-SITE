@@ -16,7 +16,6 @@
         width: 100%;
     }
     .faculty-member { 
-        width: 48%;
         margin: 0;
         h3 {
             font-size: 1.5rem;
@@ -37,11 +36,21 @@
 
     }
     .admin-member { 
-        width: 48%;
         margin: 0;
         h3 {
             font-size: 1.5rem;
         }
     }
 }
+}
+
+@media (min-width: 20rem) {
+    .admin-member, .faculty-member {
+    width: 100%;
+    }
+}
+@media (min-width: 37.5rem) {
+    .admin-member, .faculty-member {
+    width: 48%;
+    }
 }

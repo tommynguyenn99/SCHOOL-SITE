@@ -8,7 +8,7 @@
         font-weight: bold;
     }
     .single-student { 
-        width: 30%;
+        margin-bottom: 3rem;
         text-decoration: none;
         img { 
             width: 300px;
@@ -17,3 +17,20 @@
         }
     }
 }
+
+@media (min-width: 20rem) { 
+    .single-student { 
+        width: 100%;
+    }
+}
+@media (min-width: 37.5rem) { 
+    .single-student { 
+        width: 48%;
+    }
+}
+@media (min-width: 56.25rem) { 
+    .single-student { 
+        width: 30%;
+    }
+}
+
