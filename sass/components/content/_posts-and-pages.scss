@@ -52,6 +52,16 @@
     transition: color 0.3s ease;
 }
 
+.all-news {
+    margin: 0;
+    font-size: 18px;
+    color: #003c71;
+    transition: color 0.3s ease;
+}
+.all-news:hover a {
+    color: #3766ac;
+}
+
 .post-details a:hover {
     text-decoration: underline;
 }
@@ -60,3 +70,15 @@
     color: #3766ac;
 }
 
+.alignwide {
+    margin-left: 0px;
+    width: calc(100% + 50px);
+    max-width: calc(100% + 50px);
+}
+
+.alignfull {
+	margin-left: calc( -100vw / 2 + 100% / 2 );
+	margin-right: calc( -100vw / 2 + 100% / 2 );
+	max-width: 100vw;
+	width: auto;
+}
