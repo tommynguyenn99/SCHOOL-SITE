@@ -1117,6 +1117,10 @@ ul ul a.focus {
 .site-footer .footer-contact, .site-footer .site-info {
 	margin: 0 auto;
 }
+.site-footer .footer-logo {
+	height: 4rem;
+	margin: 0 auto;
+}
 
 .site-main {
 	margin: 0 auto;
