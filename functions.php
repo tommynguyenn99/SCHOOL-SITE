@@ -95,6 +95,8 @@ function fwd_school_theme_setup()
 	 *
 	 * @link https://codex.wordpress.org/Theme_Logo
 	 */
+	add_theme_support( 'align-wide' );
+
 	add_theme_support(
 		'custom-logo',
 		array(

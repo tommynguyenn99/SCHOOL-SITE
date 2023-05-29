@@ -175,6 +175,7 @@ get_header();
             </article>
             <?php
                 }
+    
                 wp_reset_postdata();
             }
 
@@ -189,6 +190,7 @@ get_header();
 
     <a href="#" class="topbutton"></a>
 
+    <a class="all-news" href="https://tommynguyen.ca/school/news/">See All News</a>
 </main><!-- #primary -->
 
 <?php
