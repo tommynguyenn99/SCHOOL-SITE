@@ -630,17 +630,29 @@ textarea {
 --------------------------------------------------------------*/
 /* Navigation
 --------------------------------------------- */
+/* Common styles */
 .main-navigation {
 	display: block;
 	width: 100%;
 }
-.main-navigation ul {
-	display: none;
+
+ul {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
 }
-.main-navigation ul ul {
+
+li {
+	position: relative;
+}
+
+a {
+	display: block;
+	text-decoration: none;
+}
+
+/* Submenu styles */
+ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
@@ -648,64 +660,102 @@ textarea {
 	left: -999em;
 	z-index: 99999;
 }
-.main-navigation ul ul ul {
+
+ul ul ul {
 	left: -999em;
 	top: 0;
 }
-.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
+
+li:hover > ul,
+li.focus > ul {
 	display: block;
 	left: auto;
 }
-.main-navigation ul ul a {
-	width: 200px;
+
+ul ul a:hover,
+ul ul a.focus {
+	/* Styles for submenu links */
 }
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
-.main-navigation li {
-	position: relative;
-}
-.main-navigation a {
-	display: block;
-	text-decoration: none;
-}
-/* Small menu. */
+
+/* Small menu */
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+	float: right;
+	position: relative;
+	bottom: 1rem;
+	background-color: black;
+	color: white;
 }
 
-@media screen and (min-width: 37.5em) {
+/* Media queries */
+@media screen and (max-width: 797px) {
+	/* Styles for viewport width < 798px (Mobile) */
 	.menu-toggle {
 		display: none;
 	}
-	.main-navigation ul {
+	.site-navigation .nav-menu,
+	.site-navigation .sub-menu {
+		display: none;
+	}
+	.main-navigation.toggled .nav-menu,
+	.main-navigation.toggled .sub-menu {
+		display: block;
+	}
+	.menu {
+		position: relative;
+		bottom: auto;
+		float: none;
+		display: none;
+	}
+}
+@media screen and (min-width: 20rem) {
+	/* Styles for viewport width >= 20rem */
+	.main-navigation.toggled ul {
+		width: 100%;
+		display: block;
+	}
+	.menu-toggle {
+		display: block;
+	}
+	.main-navigation li {
+		background-color: #111;
+	}
+	/* .main-navigation li:hover {
+	  background-color: green;
+	} */
+	.main-navigation a {
+		text-align: center;
+	}
+	.sub-menu li a {
+		text-align: center;
+	}
+}
+@media screen and (min-width: 37.5rem) {
+	/* Styles for viewport width >= 37.5rem */
+	.menu {
+		/* display: block; */
+		float: right;
+		position: relative;
+		bottom: 1.4rem;
+	}
+	.main-navigation li {
+		padding: 0;
+	}
+}
+@media screen and (min-width: 50rem) {
+	/* Styles for viewport width >= 50rem */
+	.menu-toggle {
+		display: none;
+	}
+	.sub-menu li {
+		display: block;
+	}
+	#main-navigation {
 		display: flex;
 	}
 }
-.site-main .comment-navigation,
-.site-main .posts-navigation,
-.site-main .post-navigation {
-	margin: 0 0 1.5em;
-}
-.comment-navigation .nav-links,
-.posts-navigation .nav-links,
-.post-navigation .nav-links {
-	display: flex;
-}
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-	flex: 1 0 50%;
-}
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-	text-align: end;
-	flex: 1 0 50%;
-}
-
+/* Site Nav (Navbar) */
 .site-header {
 	width: 100%;
 	background-color: #111;
@@ -715,27 +765,43 @@ textarea {
 	top: 0;
 	left: 0;
 }
+
+.site-header li {
+	background-color: #111;
+}
+
 .site-header a {
 	color: #fff;
-	padding-right: 1.2rem;
 }
-.site-header .menu {
-	display: flex;
-	float: right;
+
+.menu {
+	margin: 1rem 0 0 0;
 }
-.site-header .site-title {
+.menu a {
+	margin: 0 1rem;
+}
+.menu a:hover {
+	color: green;
+}
+
+.menu-item:hover .sub-menu {
+	display: block;
+}
+
+.site-title {
 	font-size: 1.3em;
 	text-transform: uppercase;
 	margin: 3rem 0 0 1.2rem;
 }
-.site-header .site-title a {
+
+.site-title a {
 	text-decoration: none;
 }
-.site-header .main-navigation {
+
+.main-navigation {
 	display: block;
-	width: 100%;
 	position: absolute;
-	top: 52px;
+	top: 48px;
 	right: 0;
 }
 
@@ -1046,12 +1112,8 @@ textarea {
 }
 
 .site-main {
-	width: 60%;
 	margin: 0 auto;
 	margin-top: 8rem;
-}
-.site-main p {
-	font-size: 1.2rem;
 }
 .site-main .schedule-caption {
 	margin-bottom: 1rem;
@@ -1065,13 +1127,31 @@ textarea {
 }
 .site-main table tbody td {
 	text-align: center;
-	font-size: 1.2rem;
 	padding: 1rem;
 }
 .site-main table tbody tr:nth-child(2n+1) {
 	background-color: rgb(215, 215, 215);
 }
 
+@media (min-width: 20rem) {
+	.site-main p {
+		font-size: 0.8rem;
+	}
+	.site-main .table-wrapper {
+		overflow-x: auto;
+	}
+	.site-main table {
+		width: 100%;
+	}
+}
+@media (min-width: 37.5rem) {
+	.site-main p {
+		font-size: 1rem;
+	}
+	.site-main table tbody td {
+		font-size: 1rem;
+	}
+}
 .site-main {
 	width: 80%;
 }
