@@ -1,11 +1,6 @@
 .site-main { 
-    width: 60%;
     margin: 0 auto;
     margin-top: 8rem;
-
-    p { 
-        font-size: 1.2rem;
-    }
 
 .schedule-caption { 
     margin-bottom: 1rem;
@@ -21,7 +16,6 @@ table {
     tbody {
         td { 
             text-align: center;
-            font-size: 1.2rem;
             padding: 1rem;
         }
     tr:nth-child(2n+1) { 
@@ -29,4 +23,35 @@ table {
     }
 }
 }
+}
+
+// Media Query 
+@media (min-width: 20rem) { 
+    .site-main {
+        p { 
+            font-size: 0.8rem;
+        }
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+    }
+}
+}
+
+@media (min-width: 37.5rem) {
+    .site-main { 
+        p { 
+            font-size: 1rem;
+        }
+        table { 
+           tbody {
+            td { 
+                font-size: 1rem;
+            }
+           }
+        }
+    }
 }

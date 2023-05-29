@@ -25,36 +25,37 @@ get_header();
     the_field('table_information');
     echo "</p>";
     ?>
-    <table>
-        <caption class="schedule-caption"><?php the_field('schedule_heading'); ?></caption>
-        <!-- Table Head -->
-        <thead>
-            <tr>
-                <th><?php the_field('table_head_date'); ?></th>
-                <th><?php the_field('table_course_head'); ?></th>
-                <th><?php the_field('table_instructor_head'); ?></th>
-            </tr>
-        </thead>
+    <div class="table-wrapper">
+        <table>
+            <caption class="schedule-caption"><?php the_field('schedule_heading'); ?></caption>
+            <!-- Table Head -->
+            <thead>
+                <tr>
+                    <th><?php the_field('table_head_date'); ?></th>
+                    <th><?php the_field('table_course_head'); ?></th>
+                    <th><?php the_field('table_instructor_head'); ?></th>
+                </tr>
+            </thead>
 
-        <!-- Date  -->
-        <tbody>
-            <?php
-            if (have_rows('table_data')) {
-                while (have_rows('table_data')) {
-                    the_row();
-            ?>
-                    <tr>
-                        <td><?php the_sub_field('course_date'); ?></td>
-                        <td><?php the_sub_field('course_name_program'); ?></td>
-                        <td><?php the_sub_field('instructor_name_program'); ?></td>
-                    </tr>
-            <?php
+            <!-- Date  -->
+            <tbody>
+                <?php
+                if (have_rows('table_data')) {
+                    while (have_rows('table_data')) {
+                        the_row();
+                ?>
+                        <tr>
+                            <td><?php the_sub_field('course_date'); ?></td>
+                            <td><?php the_sub_field('course_name_program'); ?></td>
+                            <td><?php the_sub_field('instructor_name_program'); ?></td>
+                        </tr>
+                <?php
+                    }
                 }
-            }
-            ?>
-        </tbody>
-    </table>
-
+                ?>
+            </tbody>
+        </table>
+    </div>
     <a href="#" class="topbutton"></a>
 </main><!-- #primary -->
 
