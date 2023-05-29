@@ -708,6 +708,13 @@ ul ul a.focus {
 		float: none;
 		display: none;
 	}
+	/* Display sub-menu on smaller screens */
+	.main-navigation.toggled .sub-menu {
+		display: block;
+		position: static;
+		box-shadow: none;
+		float: none;
+	}
 }
 @media screen and (min-width: 20rem) {
 	/* Styles for viewport width >= 20rem */

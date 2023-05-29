@@ -58,29 +58,37 @@
   
   /* Media queries */
   @media screen and (max-width: 797px) {
-	/* Styles for viewport width < 798px (Mobile) */
-	.menu-toggle {
-	  display: none;
-	}
-  
-	.site-navigation .nav-menu,
-	.site-navigation .sub-menu {
-	  display: none;
-	}
-  
-	.main-navigation.toggled .nav-menu,
-	.main-navigation.toggled .sub-menu {
-	  display: block;
-	}
-  
-	.menu {
-	  position: relative;
-	  bottom: auto;
-	  float: none;
-	  display: none;
-	}
-  }
-  
+    /* Styles for viewport width < 798px (Mobile) */
+    .menu-toggle {
+        display: none;
+    }
+
+    .site-navigation .nav-menu,
+    .site-navigation .sub-menu {
+        display: none;
+    }
+
+    .main-navigation.toggled .nav-menu,
+    .main-navigation.toggled .sub-menu {
+        display: block;
+    }
+
+    .menu {
+        position: relative;
+        bottom: auto;
+        float: none;
+        display: none;
+    }
+
+    /* Display sub-menu on smaller screens */
+    .main-navigation.toggled .sub-menu {
+        display: block;
+        position: static;
+        box-shadow: none;
+        float: none;
+    }
+}
+
   @media screen and (min-width: 20rem) {
 	/* Styles for viewport width >= 20rem */
 	.main-navigation.toggled ul {
