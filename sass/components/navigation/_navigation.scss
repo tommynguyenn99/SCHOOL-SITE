@@ -1,149 +1,192 @@
+/* Common styles */
 .main-navigation {
 	display: block;
 	width: 100%;
-
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
-
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 100%;
-			left: -999em;
-			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li {
-
-				&:hover > ul,
-				&.focus > ul {
-					display: block;
-					left: auto;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-
-	li {
-		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
-	}
-
-	a {
-		display: block;
-		text-decoration: none;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-	}
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
+  }
+  
+  ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+  }
+  
+  li {
+	position: relative;
+  }
+  
+  a {
 	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-
-	.menu-toggle {
-		display: none;
-	}
-
-	.main-navigation ul {
-		display: flex;
-	}
-}
-
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-
-	.site-main & {
-		margin: 0 0 1.5em;
-	}
-
-	.nav-links {
-		display: flex;
-	}
-
-	.nav-previous {
-		flex: 1 0 50%;
-	}
-
-	.nav-next {
-		text-align: end;
-		flex: 1 0 50%;
-	}
-}
-
-// Site Nav (Navbar) 
-.site-header {
-width: 100%;
-background-color: #111;
-height: 6rem;
-border-top: 3px solid #305c9f;
-position: fixed;
-top: 0;
-left: 0;
-// z-index: 1000;
-a {
-color: #fff;
-padding-right: 1.2rem;
-}
-.menu  { 
-	display: flex;
-	float: right;
-}
-
-.site-title { 
-    font-size: 1.3em;
-    text-transform: uppercase;
-	margin: 3rem 0 0 1.2rem;
-a { 
 	text-decoration: none;
-}
-	
-}
-.main-navigation {
+  }
+  
+  /* Submenu styles */
+  ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
+  }
+  
+  ul ul ul {
+	left: -999em;
+	top: 0;
+  }
+  
+  li:hover > ul,
+  li.focus > ul {
 	display: block;
-    width: 100%;
-    position: absolute;
-    top: 52px;
-    right: 0;
-    // z-index: 1000;
-}
-}
-
-
+	left: auto;
+  }
+  
+  ul ul a:hover,
+  ul ul a.focus {
+	/* Styles for submenu links */
+  }
+  
+  /* Small menu */
+  .menu-toggle,
+  .main-navigation.toggled ul {
+	display: block;
+	float: right;
+	position: relative;
+	bottom: 1rem;
+	background-color: black;
+	color: white;
+  }
+  
+  /* Media queries */
+  @media screen and (max-width: 797px) {
+	/* Styles for viewport width < 798px (Mobile) */
+	.menu-toggle {
+	  display: none;
+	}
+  
+	.site-navigation .nav-menu,
+	.site-navigation .sub-menu {
+	  display: none;
+	}
+  
+	.main-navigation.toggled .nav-menu,
+	.main-navigation.toggled .sub-menu {
+	  display: block;
+	}
+  
+	.menu {
+	  position: relative;
+	  bottom: auto;
+	  float: none;
+	  display: none;
+	}
+  }
+  
+  @media screen and (min-width: 20rem) {
+	/* Styles for viewport width >= 20rem */
+	.main-navigation.toggled ul {
+	  width: 100%;
+	  display: block;
+	}
+  
+	.menu-toggle {
+	  display: block;
+	}
+  
+	.main-navigation li {
+	  background-color: #111;
+	}
+  
+	/* .main-navigation li:hover {
+	  background-color: green;
+	} */
+  
+	.main-navigation a {
+	  text-align: center;
+	}
+  
+	.sub-menu li a {
+	  text-align: center;
+	}
+  }
+  
+  @media screen and (min-width: 37.5rem) {
+	/* Styles for viewport width >= 37.5rem */
+	.menu {
+	  /* display: block; */
+	  float: right;
+	  position: relative;
+	  bottom: 1.4rem;
+	}
+  
+	.main-navigation li {
+	  padding: 0;
+	}
+  }
+  
+  @media screen and (min-width: 50rem) {
+	/* Styles for viewport width >= 50rem */
+	.menu-toggle {
+	  display: none;
+	}
+  
+	.sub-menu li {
+	  display: block;
+	}
+  
+	#main-navigation {
+	  display: flex;
+	}
+  }
+  
+  /* Site Nav (Navbar) */
+  .site-header {
+	width: 100%;
+	background-color: #111;
+	height: 6rem;
+	border-top: 3px solid #305c9f;
+	position: fixed;
+	top: 0;
+	left: 0;
+  }
+  
+  .site-header li {
+	background-color: #111;
+  }
+  
+  .site-header {
+	a {
+	  color: #fff;
+	}
+  }
+  
+  .menu {
+	margin: 1rem 0 0 0;
+	a {
+	  margin: 0 1rem;
+	  &:hover {
+		color: green;
+	  }
+	}
+  }
+  
+  .menu-item:hover .sub-menu {
+	display: block;
+  }
+  
+  .site-title {
+	font-size: 1.3em;
+	text-transform: uppercase;
+	margin: 3rem 0 0 1.2rem;
+  }
+  
+  .site-title a {
+	text-decoration: none;
+  }
+  
+  .main-navigation {
+	display: block;
+	position: absolute;
+	top: 48px;
+	right: 0;
+  }
+  
