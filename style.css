@@ -736,6 +736,8 @@ ul ul a.focus {
 	}
 	.sub-menu li a {
 		text-align: center;
+		position: relative;
+		right: 1.4rem;
 	}
 }
 @media screen and (min-width: 37.5rem) {
@@ -1115,6 +1117,10 @@ ul ul a.focus {
 	list-style: none;
 }
 .site-footer .footer-contact, .site-footer .site-info {
+	margin: 0 auto;
+}
+.site-footer .footer-logo {
+	height: 4rem;
 	margin: 0 auto;
 }
 
