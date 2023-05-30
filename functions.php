@@ -95,7 +95,7 @@ function fwd_school_theme_setup()
 	 *
 	 * @link https://codex.wordpress.org/Theme_Logo
 	 */
-	add_theme_support( 'align-wide' );
+	add_theme_support('align-wide');
 
 	add_theme_support(
 		'custom-logo',
@@ -203,3 +203,31 @@ function change_student_title_text($title)
 }
 
 add_filter('enter_title_here', 'change_student_title_text');
+
+// animation on news 
+function enqueue_animate_on_scroll()
+{
+	// Enqueue Animate on Scroll CSS file
+	wp_enqueue_style('animate-on-scroll', get_template_directory_uri() . '/path/to/animate-on-scroll.css');
+
+	// Enqueue Animate on Scroll JS file
+	wp_enqueue_script('animate-on-scroll', get_template_directory_uri() . '/path/to/animate-on-scroll.js', array('jquery'), '1.0', true);
+}
+
+// Enqueue Animate on Scroll files only for the 'post' post type
+function enqueue_animate_on_scroll_for_post_type($hook)
+{
+	if ('post.php' !== $hook && 'post-new.php' !== $hook) {
+		return;
+	}
+
+	$post_type = get_post_type($_GET['post']);
+	if ('post' !== $post_type) {
+		return;
+	}
+
+	enqueue_animate_on_scroll();
+}
+
+// Hook the enqueueing function to the appropriate action
+add_action('admin_enqueue_scripts', 'enqueue_animate_on_scroll_for_post_type');
