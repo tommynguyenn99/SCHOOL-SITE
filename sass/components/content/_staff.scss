@@ -1,7 +1,8 @@
+@use "typography" as *;
 
 .site-main { 
     width: 80%;
-
+	font-family: $main-font;
 .faculty-staff { 
     display: flex;
     flex-wrap: wrap;
@@ -34,7 +35,6 @@
         width: 100%;
         text-decoration: underline;
         font-size: 2rem;
-
     }
     .admin-member { 
         margin: 0;

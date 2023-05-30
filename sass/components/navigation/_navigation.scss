@@ -1,9 +1,13 @@
 @use "colors" as *;
+@use "typography" as *;
+
+
 
 /* Common styles */
 .main-navigation {
 	display: block;
 	width: 100%;
+	font-family: 'Source Sans Pro', sans-serif;
   }
   
   ul {
@@ -19,6 +23,7 @@
   a {
 	display: block;
 	text-decoration: none;
+	
   }
   
   /* Submenu styles */

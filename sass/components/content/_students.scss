@@ -1,5 +1,8 @@
 @use "colors" as *;
+@use "typography" as *;
 
+.site-main { 
+    font-family: $main-font;
 .students { 
     display: flex;
     flex-wrap: wrap;
@@ -19,7 +22,9 @@
         }
     }
 }
+}
 
+// Media Query
 @media (min-width: 20rem) { 
     .single-student { 
         width: 100%;

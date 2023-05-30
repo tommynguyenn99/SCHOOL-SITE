@@ -203,3 +203,12 @@ function change_student_title_text($title)
 }
 
 add_filter('student_post', 'change_student_title_text');
+
+
+// Font function 
+wp_enqueue_style(
+	'fwd-googlefonts',
+	'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap',
+	array(),
+	null // Set null if loading multiple Google Fonts from their CDN
+);
