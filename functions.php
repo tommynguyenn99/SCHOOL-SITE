@@ -95,7 +95,7 @@ function fwd_school_theme_setup()
 	 *
 	 * @link https://codex.wordpress.org/Theme_Logo
 	 */
-	add_theme_support( 'align-wide' );
+	add_theme_support('align-wide');
 
 	add_theme_support(
 		'custom-logo',
@@ -202,4 +202,4 @@ function change_student_title_text($title)
 	return $title;
 }
 
-add_filter('enter_title_here', 'change_student_title_text');
+add_filter('student_post', 'change_student_title_text');
