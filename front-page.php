@@ -76,6 +76,7 @@ get_header();
             }
             ?>
         </section>
+        <!-- Do we need this code?  -->
 
         <section class="home-work"></section>
 
@@ -144,6 +145,7 @@ get_header();
             endif;
             ?>
         </section>
+        <!-- Do we need this code?  -->
 
         <section class="home-blog">
             <?php
@@ -163,19 +165,19 @@ get_header();
                     // have the post below singlular or else will loop 
                     $blog_query->the_post();
             ?>
-                   <article>
-                <a href="<?php the_permalink(); ?>">
-                    <div class="post-thumbnail">
-                        <?php the_post_thumbnail('medium'); ?>
-                        <div class="post-details">
-                            <h3><?php the_title(); ?></h3>
-                        </div>
-                    </div>
-                </a>
-            </article>
+                    <article>
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="post-thumbnail">
+                                <?php the_post_thumbnail('medium'); ?>
+                                <div class="post-details">
+                                    <h3><?php the_title(); ?></h3>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
             <?php
                 }
-    
+
                 wp_reset_postdata();
             }
 
