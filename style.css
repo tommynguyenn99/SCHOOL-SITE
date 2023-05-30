@@ -736,6 +736,8 @@ ul ul a.focus {
 	}
 	.sub-menu li a {
 		text-align: center;
+		position: relative;
+		right: 1.4rem;
 	}
 }
 @media screen and (min-width: 37.5rem) {

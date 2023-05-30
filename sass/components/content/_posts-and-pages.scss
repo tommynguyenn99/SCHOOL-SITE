@@ -1,3 +1,5 @@
+@use "colors" as *;
+
 .sticky {
 	display: block;
 }
@@ -40,7 +42,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: $post-details;
     padding: 10px;
     text-align: center;
 }
@@ -48,18 +50,18 @@
 .post-details h3 {
     margin: 0;
     font-size: 18px;
-    color: #003c71;
+    color: $post-details-h3;
     transition: color 0.3s ease;
 }
 
 .all-news {
     margin: 0;
     font-size: 18px;
-    color: #003c71;
+    color: $post-details-h3;
     transition: color 0.3s ease;
 }
 .all-news:hover a {
-    color: #3766ac;
+    color: $post-details-hover;
 }
 
 .post-details a:hover {
@@ -67,7 +69,7 @@
 }
 
 .post-details:hover h3 {
-    color: #3766ac;
+    color: $post-details-hover;
 }
 
 .alignwide {
