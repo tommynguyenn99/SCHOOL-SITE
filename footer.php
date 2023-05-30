@@ -16,30 +16,15 @@
 	<div class="footer-contact">
 
 		<nav id="footer-navigation" class="footer-navigation">
-			<a href="<?php echo esc_url(__('https://docs.google.com/document/d/1OBz9bzBbeV8paIeXLqZOcoNKQpn0oK3SpHiaOeZQCtY/edit?usp=sharing/', 'fwd-school-theme')); ?>">
-				<!-- We can delete google docs link later, no longer needed -->
-				<!-- Credits header  -->
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf(esc_html__('Photos Cited', 'fwd-school-theme'));
-				?>
+			<!-- Credits header  -->
+			<a href="<?php echo esc_url(home_url('https://tommynguyen.ca/school/')); ?>">
+				<img class="footer-logo" src="<?php echo get_template_directory_uri(); ?>/logo/iconmonstr-idea-7-240.png" alt="Logo">
 			</a>
 			<?php wp_nav_menu(array('theme_location' => 'footer-left')); ?>
 		</nav>
 	</div>
 	<!-- Created by  -->
 	<div class="site-info">
-		<a href="<?php echo esc_url( home_url( 'https://tommynguyen.ca/school/' ) ); ?>">
-		<img src="./fwd-school-theme/logo/logo.png" alt="Logo">
-		</a>
 		<?php esc_html_e('Created by ', 'fwd-school-theme'); ?><a href="<?php echo esc_url(__('https://tommynguyen.ca/', 'fwd-school-theme')); ?>"><?php esc_html_e('Tommy N & Brooke N', 'fwd-school-theme'); ?></a>
-
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
-</div><!-- #page -->
-
-<?php wp_footer(); ?>
-
-</body>
-
-</html>
