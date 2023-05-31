@@ -7,7 +7,7 @@
 	display: block;
 	width: 100%;
 	font-family: 'Source Sans Pro', sans-serif;
-	z-index: 999;
+	z-index: 3000;
   }
   
   ul {
@@ -160,7 +160,7 @@
 	background-color: #111;
 	height: 6rem;
 	border-top: 3px solid $border-top;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
   }

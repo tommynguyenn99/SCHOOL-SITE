@@ -62,6 +62,7 @@
     font-size: 18px;
     color: $post-details-h3;
     transition: color 0.3s ease;
+    text-decoration: underline;
 }
 .all-news:hover a {
     color: $post-details-hover;
