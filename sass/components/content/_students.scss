@@ -27,6 +27,9 @@
 @media (min-width: 20rem) { 
     .single-student { 
         width: 100%;
+        p { 
+            font-size: 1rem;
+        }
     }
 }
 @media (min-width: 37.5rem) { 
@@ -37,6 +40,9 @@
 @media (min-width: 56.25rem) { 
     .single-student { 
         width: 30%;
+        p { 
+            font-size: 1.1rem;
+        }
     }
 }
 
