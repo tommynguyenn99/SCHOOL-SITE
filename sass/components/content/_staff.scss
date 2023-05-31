@@ -1,4 +1,4 @@
-@use "typography" as *;
+
 
 .site-main { 
     width: 80%;
@@ -31,6 +31,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 2rem;
+ 
     .admin-header { 
         width: 100%;
         text-decoration: underline;

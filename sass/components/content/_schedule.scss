@@ -1,8 +1,9 @@
-@use "colors" as *;
+
 
 .site-main { 
     margin: 0 auto;
     margin-top: 8rem;
+    font-family: $main-font;
 
 .schedule-caption { 
     margin-bottom: 1rem;

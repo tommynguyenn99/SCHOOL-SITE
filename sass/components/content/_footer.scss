@@ -1,7 +1,8 @@
-@use "colors" as *;
+
 // Footer 
 .site-footer {
     background-color: $black;
+    font-family: $main-font;
     color: $white;
     text-align: center;
     padding: 1.25rem;

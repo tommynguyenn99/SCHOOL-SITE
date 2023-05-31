@@ -1,6 +1,5 @@
-
-
 <?php
+
 /**
  * The template for displaying all pages
  *
@@ -43,24 +42,24 @@ get_header();
 
         $recent_posts = new WP_Query($args);
 
-		if ($recent_posts->have_posts()) {
-			while ($recent_posts->have_posts()) {
-				$recent_posts->the_post();
-				?>
-				<div class="recent-post">
-					<?php if (has_post_thumbnail()) : ?>
-						<a class="thumbnail-link" href="<?php the_permalink(); ?>">
-							<?php the_post_thumbnail('medium'); ?>
-						</a>
-					<?php endif; ?>
-					<h3 class="post-title">
-						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-					</h3>
-				</div>
-				<?php
-			}
-			wp_reset_postdata();
-		}
+        if ($recent_posts->have_posts()) {
+            while ($recent_posts->have_posts()) {
+                $recent_posts->the_post();
+        ?>
+                <div class="recent-post">
+                    <?php if (has_post_thumbnail()) : ?>
+                        <a class="thumbnail-link" href="<?php the_permalink(); ?>">
+                            <?php the_post_thumbnail('medium'); ?>
+                        </a>
+                    <?php endif; ?>
+                    <h3 class="post-title">
+                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    </h3>
+                </div>
+        <?php
+            }
+            wp_reset_postdata();
+        }
         ?>
     </div><!-- .recent-posts -->
 
@@ -69,4 +68,3 @@ get_header();
 <?php
 get_sidebar();
 get_footer();
-

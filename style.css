@@ -634,6 +634,7 @@ textarea {
 .main-navigation {
 	display: block;
 	width: 100%;
+	font-family: "Source Sans Pro", sans-serif;
 }
 
 ul {
@@ -728,9 +729,6 @@ ul ul a.focus {
 	.main-navigation li {
 		background-color: #111;
 	}
-	/* .main-navigation li:hover {
-	  background-color: green;
-	} */
 	.main-navigation a {
 		text-align: center;
 	}
@@ -780,7 +778,7 @@ ul ul a.focus {
 }
 
 .site-header a {
-	color: #fff;
+	color: white;
 }
 
 .menu {
@@ -816,45 +814,41 @@ ul ul a.focus {
 
 /* Posts and pages
 --------------------------------------------- */
-.sticky {
+.site-main {
+	font-family: "Source Sans Pro", sans-serif;
+}
+.site-main .sticky {
 	display: block;
 }
-
-.post,
-.page {
+.site-main .post,
+.site-main .page {
 	margin: 0 0 1.5em;
 }
-
-.updated:not(.published) {
+.site-main .updated:not(.published) {
 	display: none;
 }
-
-.page-content,
-.entry-content,
-.entry-summary {
+.site-main .page-content,
+.site-main .entry-content,
+.site-main .entry-summary {
 	margin: 1.5em 0 0;
 }
-
-.page-links {
+.site-main .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
 }
-
-.home-blog {
+.site-main .home-blog {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
-
-.post-thumbnail {
+.site-main .post-thumbnail {
 	position: relative;
+	z-index: -1;
 }
-
-.post-thumbnail a {
+.site-main .post-thumbnail a {
 	display: block;
 }
-
-.post-details {
+.site-main .post-details {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -863,44 +857,46 @@ ul ul a.focus {
 	padding: 10px;
 	text-align: center;
 }
-
-.post-details h3 {
+.site-main .post-details h3 {
 	margin: 0;
 	font-size: 18px;
 	color: #003c71;
 	transition: color 0.3s ease;
 }
-
-.all-news {
+.site-main .all-news {
 	margin: 0;
 	font-size: 18px;
 	color: #003c71;
 	transition: color 0.3s ease;
 }
-
-.all-news:hover a {
+.site-main .all-news:hover a {
 	color: #3766ac;
 }
-
-.post-details a:hover {
+.site-main .post-details a:hover {
 	text-decoration: underline;
 }
-
-.post-details:hover h3 {
+.site-main .post-details:hover h3 {
 	color: #3766ac;
 }
-
-.alignwide {
+.site-main .alignwide {
 	margin-left: 0px;
 	width: calc(100% + 50px);
 	max-width: calc(100% + 50px);
 }
-
-.alignfull {
+.site-main .alignfull {
 	margin-left: calc(-50vw + 50%);
 	margin-right: calc(-50vw + 50%);
 	max-width: 100vw;
 	width: auto;
+}
+.site-main .news {
+	opacity: 0; /* Initially set opacity to 0 */
+	transform: translateY(50px); /* Initially move element down by 50px */
+	transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Add transition effects */
+}
+.site-main .news.animate {
+	opacity: 1; /* Animate opacity to 1 */
+	transform: translateY(0); /* Animate element back to its original position */
 }
 
 /* Comments
@@ -1095,8 +1091,9 @@ ul ul a.focus {
 }
 
 .site-footer {
-	background-color: #111;
-	color: #fff;
+	background-color: black;
+	font-family: "Source Sans Pro", sans-serif;
+	color: white;
 	text-align: center;
 	padding: 1.25rem;
 	margin-top: 1rem;
@@ -1106,7 +1103,7 @@ ul ul a.focus {
 	width: 100%;
 }
 .site-footer a {
-	color: #fff;
+	color: white;
 	text-decoration: none;
 	margin: 0 auto;
 }
@@ -1127,6 +1124,7 @@ ul ul a.focus {
 .site-main {
 	margin: 0 auto;
 	margin-top: 8rem;
+	font-family: "Source Sans Pro", sans-serif;
 }
 .site-main .schedule-caption {
 	margin-bottom: 1rem;
@@ -1167,6 +1165,7 @@ ul ul a.focus {
 }
 .site-main {
 	width: 80%;
+	font-family: "Source Sans Pro", sans-serif;
 }
 .site-main .faculty-staff {
 	display: flex;
@@ -1216,21 +1215,24 @@ ul ul a.focus {
 		width: 48%;
 	}
 }
-.students {
+.site-main {
+	font-family: "Source Sans Pro", sans-serif;
+}
+.site-main .students {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
-.students a {
+.site-main .students a {
 	text-decoration: none;
 	color: rgb(6, 6, 145);
 	font-weight: bold;
 }
-.students .single-student {
+.site-main .students .single-student {
 	margin-bottom: 3rem;
 	text-decoration: none;
 }
-.students .single-student img {
+.site-main .students .single-student img {
 	width: 300px;
 	height: 200px;
 	-o-object-fit: cover;
