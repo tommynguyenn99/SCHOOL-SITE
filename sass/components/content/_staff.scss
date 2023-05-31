@@ -49,10 +49,16 @@
 @media (min-width: 20rem) {
     .admin-member, .faculty-member {
     width: 100%;
+    p { 
+        font-size: 1rem;
+    }
     }
 }
 @media (min-width: 37.5rem) {
     .admin-member, .faculty-member {
     width: 48%;
+    p { 
+        font-size: 1.1rem;
+    }
     }
 }

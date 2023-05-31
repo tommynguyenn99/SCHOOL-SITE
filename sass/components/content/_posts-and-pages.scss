@@ -32,11 +32,12 @@
 
 .post-thumbnail {
     position: relative;
-z-index: -1;
+    z-index: -1;
 }
 
 .post-thumbnail a {
     display: block;
+    z-index: -1;
 }
 
 .post-details {
@@ -86,14 +87,33 @@ z-index: -1;
 	max-width: 100vw;
 	width: auto;
 }
-.news {
-    opacity: 0; /* Initially set opacity to 0 */
-    transform: translateY(50px); /* Initially move element down by 50px */
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Add transition effects */
-  }
-  
-  .news.animate {
-    opacity: 1; /* Animate opacity to 1 */
-    transform: translateY(0); /* Animate element back to its original position */
-  }
+
 }
+
+// Media 
+@media (min-width: 20rem) {
+    .entry-content {
+        p {
+            font-size: 1rem;
+        }
+    }
+    .home-intro { 
+        p { 
+            font-size: 1rem;
+        }
+    }
+}
+
+@media (min-width: 37.5rem) {
+    .entry-content {
+        p {
+            font-size: 1.2rem;
+        }
+    }
+    .home-intro { 
+        p { 
+            font-size: 1.1rem;
+        }
+    }
+}
+

@@ -39,7 +39,7 @@ get_header();
              */
         ?>
             <div data-aos="fade-up">
-                <article>
+                <article class="article">
                     <a href="<?php the_permalink(); ?>">
                         <?php if (has_post_thumbnail()) : ?>
                             <div class="post-thumbnail">

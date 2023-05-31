@@ -30,29 +30,34 @@ table {
 
 // Media Query 
 @media (min-width: 20rem) { 
-    .site-main {
+    .schedule-page {
         p { 
-            font-size: 0.8rem;
+            font-size: 1rem;
         }
     .table-wrapper {
         overflow-x: auto;
     }
 
-    table {
+    table { 
         width: 100%;
-    }
+        tbody {
+         td { 
+             font-size: 0.9rem;
+         }
+        }
+     }
 }
 }
 
 @media (min-width: 37.5rem) {
-    .site-main { 
+    .schedule-page { 
         p { 
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
         table { 
            tbody {
             td { 
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
            }
         }
