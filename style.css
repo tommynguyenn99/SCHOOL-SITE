@@ -635,7 +635,7 @@ textarea {
 	display: block;
 	width: 100%;
 	font-family: "Source Sans Pro", sans-serif;
-	z-index: 999;
+	z-index: 3000;
 }
 
 ul {
@@ -769,7 +769,7 @@ ul ul a.focus {
 	background-color: #111;
 	height: 6rem;
 	border-top: 3px solid #305c9f;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 }
@@ -870,6 +870,7 @@ ul ul a.focus {
 	font-size: 18px;
 	color: #003c71;
 	transition: color 0.3s ease;
+	text-decoration: underline;
 }
 .site-main .all-news:hover a {
 	color: #3766ac;

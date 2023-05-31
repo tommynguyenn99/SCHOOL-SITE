@@ -151,7 +151,7 @@ function fwd_school_theme_scripts()
 	wp_enqueue_style('fwd-school-theme-style', get_stylesheet_uri(), array(), _S_VERSION);
 	wp_style_add_data('fwd-school-theme-style', 'rtl', 'replace');
 
-	wp_enqueue_script('fwd-school-theme-navigation', get_template_directory_uri() . '/js/scroll-animate.js', array(), _S_VERSION, true);
+	wp_enqueue_script('fwd-school-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
 
 	wp_enqueue_script('scroll-animate', get_template_directory_uri() . '/js/scroll-animate.js', array('jquery'), '1.0', true);
 
